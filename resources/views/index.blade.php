@@ -4,6 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tugas copas tampilan web</title>
+    <style>
+        .tombol{
+            background-color: lightblue;
+            position: absolute;
+            padding: 5%;
+            border-radius: 10px;
+            top: 30px;
+            right: 50px;
+        }
+        .tombol a {
+            color: blue;
+            text-decoration: none;
+            font-size: 50px
+        }
+    </style>
 </head>
 <body>
     <h1>Media Online</h1>
@@ -18,8 +33,12 @@
     <h3>Cara Bergabung ke Media Online</h3>
     <ol>
         <li>Mengunjungi Website ini</li>
-        <li>Mendaftarkan di <a href="{{ route('form.signup') }}">Form Sign Up</a></li>
+        <li>Mendaftarkan di <a href="{{ route('form') }}">Form Sign Up</a></li>
         <li>Selesai</li>
+
+        <div class="tombol">
+            <a href="{{ route('temp') }}">Form film</a>
+        </div>
     </ol>
 </body>
 </html>
