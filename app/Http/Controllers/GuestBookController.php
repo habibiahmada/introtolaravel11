@@ -15,6 +15,6 @@ class GuestBookController extends Controller
     }
 
     public function master() {
-        return view('template.separate.content');
+        return view('template.task.form');
     }
 }
