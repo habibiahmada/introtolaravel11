@@ -1,7 +1,8 @@
 <?php
 
-use App\Http\Controllers\GenreController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CastController;
+use App\Http\Controllers\GenreController;
 use App\Http\Controllers\GuestBookController;
 
 Route::get('/', function () {
@@ -29,3 +30,10 @@ Route::get('/genre/{id}/edit', [GenreController::class, 'edit'])->name('genre.ed
 Route::put('/genre/{id}', [GenreController::class, 'update'])->name('genre.update');
 // proses delete data
 Route::delete('/genre/{id}', [GenreController::class, 'destroy'])->name('genre.destroy');
+
+Route::get('/cast/create', [CastController::class, 'create'])->name('cast.create');
+Route::post('/cast', [CastController::class, 'store'])->name('cast.store');
+Route::get('/cast', [CastController::class, 'index'])->name('cast.index');
+Route::get('/cast/{id}/edit', [CastController::class, 'edit'])->name('cast.edit');
+Route::put('/cast/{id}', [CastController::class, 'update'])->name('cast.update');
+Route::delete('/cast/{id}', [CastController::class, 'destroy'])->name('cast.destroy');
