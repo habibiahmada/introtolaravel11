@@ -31,9 +31,12 @@ Route::put('/genre/{id}', [GenreController::class, 'update'])->name('genre.updat
 // proses delete data
 Route::delete('/genre/{id}', [GenreController::class, 'destroy'])->name('genre.destroy');
 
-Route::get('/cast/create', [CastController::class, 'create'])->name('cast.create');
-Route::post('/cast', [CastController::class, 'store'])->name('cast.store');
-Route::get('/cast', [CastController::class, 'index'])->name('cast.index');
-Route::get('/cast/{id}/edit', [CastController::class, 'edit'])->name('cast.edit');
-Route::put('/cast/{id}', [CastController::class, 'update'])->name('cast.update');
-Route::delete('/cast/{id}', [CastController::class, 'destroy'])->name('cast.destroy');
+
+
+// Route::get('/cast/create', [CastController::class, 'create'])->name('cast.create');
+// Route::post('/cast', [CastController::class, 'store'])->name('cast.store');
+// Route::get('/cast', [CastController::class, 'index'])->name('cast.index');
+// Route::get('/cast/{id}/edit', [CastController::class, 'edit'])->name('cast.edit');
+// Route::put('/cast/{id}', [CastController::class, 'update'])->name('cast.update');
+// Route::delete('/cast/{id}', [CastController::class, 'destroy'])->name('cast.destroy');
+Route::resource('/cast', CastController::class);

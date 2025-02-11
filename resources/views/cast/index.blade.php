@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
 @endpush
 
-@section('title', 'Tambah Data Genre')
+@section('title', 'Tambah Data Cast (Pemeran)')
 @section('content')
 <section class="content">
     <div class="container-fluid">
