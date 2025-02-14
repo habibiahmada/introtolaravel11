@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CastController;
 use App\Http\Controllers\GenreController;
 use App\Http\Controllers\GuestBookController;
+use App\Http\Controllers\MovieController;
 
 Route::get('/', function () {
     return view('index');
@@ -40,3 +41,5 @@ Route::delete('/genre/{id}', [GenreController::class, 'destroy'])->name('genre.d
 // Route::put('/cast/{id}', [CastController::class, 'update'])->name('cast.update');
 // Route::delete('/cast/{id}', [CastController::class, 'destroy'])->name('cast.destroy');
 Route::resource('/cast', CastController::class);
+
+Route::resource('/movie', MovieController::class);

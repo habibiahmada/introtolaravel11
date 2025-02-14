@@ -13,7 +13,7 @@
           <img src="{{ asset('dist/img/user2-160x160.jpg') }}" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Alexander Pierce</a>
+          <a href="#" class="d-block">Habibi Ahmad Aziz</a>
         </div>
       </div>
 
@@ -53,6 +53,12 @@
                   <a href="{{ route('cast.index') }}" class="nav-link {{ Request::is('cast*') ? 'active' : '' }}">
                       <i class="far fa-circle nav-icon"></i>
                       <p>Casts Page</p>
+                  </a>
+              </li>
+              <li class="nav-item">
+                  <a href="{{ route('movie.index') }}" class="nav-link {{ Request::is('movie*') ? 'active' : '' }}">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Movie Page</p>
                   </a>
               </li>
           </ul>
